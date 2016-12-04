@@ -2,4 +2,4 @@
 
 ## References
 - [Deep Learning](#papers/deep_learning)
-- [Computer Vision](#papers/neural_networks)
+- [Computer Vision](#papers/computer_vision)
