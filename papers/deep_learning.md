@@ -43,5 +43,5 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
   115-133.][McCullochPitts1943]
   
 [McCullochPitts1943]: http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf
-[Dollar2012] : https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
+[Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 
