@@ -36,7 +36,7 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
 }
   ```
   
-- [Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
+- [Piotr Dollar, Christian Wojek (2012). Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
 
 - [McCulloch, W. S., & Pitts, W. (1943). A logical calculus of the ideas
   immanent in nervous activity. The bulletin of mathematical biophysics, 5(4),
