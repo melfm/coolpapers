@@ -35,3 +35,29 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
   ```
+  
+- [Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
+
+  ```
+@article{Dollar:2012:PDE:2197081.2197275,
+ author = {Dollar, Piotr and Wojek, Christian and Schiele, Bernt and Perona, Pietro},
+ title = {Pedestrian Detection: An Evaluation of the State of the Art},
+ journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+ issue_date = {April 2012},
+ volume = {34},
+ number = {4},
+ month = apr,
+ year = {2012},
+ issn = {0162-8828},
+ pages = {743--761},
+ numpages = {19},
+ url = {http://dx.doi.org/10.1109/TPAMI.2011.155},
+ doi = {10.1109/TPAMI.2011.155},
+ acmid = {2197275},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {Pedestrian detection, object detection, benchmark, evaluation, data set, Caltech Pedestrian data set.},
+}
+  ```
+
+
