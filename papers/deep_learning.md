@@ -38,26 +38,10 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
   
 - [Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
 
-  ```
-@article{Dollar:2012:PDE:2197081.2197275,
- author = {Dollar, Piotr and Wojek, Christian and Schiele, Bernt and Perona, Pietro},
- title = {Pedestrian Detection: An Evaluation of the State of the Art},
- journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
- issue_date = {April 2012},
- volume = {34},
- number = {4},
- month = apr,
- year = {2012},
- issn = {0162-8828},
- pages = {743--761},
- numpages = {19},
- url = {http://dx.doi.org/10.1109/TPAMI.2011.155},
- doi = {10.1109/TPAMI.2011.155},
- acmid = {2197275},
- publisher = {IEEE Computer Society},
- address = {Washington, DC, USA},
- keywords = {Pedestrian detection, object detection, benchmark, evaluation, data set, Caltech Pedestrian data set.},
-}
-  ```
+- [McCulloch, W. S., & Pitts, W. (1943). A logical calculus of the ideas
+  immanent in nervous activity. The bulletin of mathematical biophysics, 5(4),
+  115-133.][McCullochPitts1943]
+  
+[McCullochPitts1943]: http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf
 [Dollar2012] : https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 
