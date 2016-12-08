@@ -1,5 +1,25 @@
 # Deep learning
 
+- [Jonathan Tompson. (2014). Joint Training of a Convolutional Network and a Graphical Model for Human Pose Estimation.][Jonathan2014]
+
+  ```
+@article{DBLP:journals/corr/TompsonJLB14,
+  author    = {Jonathan Tompson and
+               Arjun Jain and
+               Yann LeCun and
+               Christoph Bregler},
+  title     = {Joint Training of a Convolutional Network and a Graphical Model for
+               Human Pose Estimation},
+  journal   = {CoRR},
+  volume    = {abs/1406.2984},
+  year      = {2014},
+  url       = {http://arxiv.org/abs/1406.2984},
+  timestamp = {Tue, 01 Jul 2014 11:58:08 +0200},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/TompsonJLB14},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+  ```
+  
 - [Szegedy, Vanhoucke. (2015). Rethinking the Inception Architecture for Computer Vision.][Szegedy2015]
 
   ```
@@ -19,7 +39,6 @@
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
   ```
-
 
 
 - [Jaderberg, Max and Simonyan. (2015). Spatial Transformer Networks.][Jaderberg2015]
@@ -67,3 +86,4 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
 [McCullochPitts1943]: http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 [Szegedy2015]: https://arxiv.org/pdf/1512.00567v3.pdf
+[Jonathan2014]: https://www.robots.ox.ac.uk/~vgg/rg/papers/tompson2014.pdf
