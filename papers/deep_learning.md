@@ -1,4 +1,26 @@
-# Neural Networks
+# Deep learning
+
+- [Szegedy, Vanhoucke. (2015). Rethinking the Inception Architecture for Computer Vision.][Szegedy2015]
+
+  ```
+@article{DBLP:journals/corr/SzegedyVISW15,
+  author    = {Christian Szegedy and
+               Vincent Vanhoucke and
+               Sergey Ioffe and
+               Jonathon Shlens and
+               Zbigniew Wojna},
+  title     = {Rethinking the Inception Architecture for Computer Vision},
+  journal   = {CoRR},
+  volume    = {abs/1512.00567},
+  year      = {2015},
+  url       = {http://arxiv.org/abs/1512.00567},
+  timestamp = {Sat, 02 Jan 2016 11:38:49 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SzegedyVISW15},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+  ```
+
+
 
 - [Jaderberg, Max and Simonyan. (2015). Spatial Transformer Networks.][Jaderberg2015]
 
@@ -44,4 +66,4 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
   
 [McCullochPitts1943]: http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
-
+[Szegedy2015]: https://arxiv.org/pdf/1512.00567v3.pdf
