@@ -77,6 +77,26 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
 }
   ```
   
+ - [Raina, Rajat et al. (2007). Self-taught Learning: Transfer Learning from Unlabeled Data.][Raina2007] 
+   ``` 
+  @inproceedings{Raina:2007:SLT:1273496.1273592,
+ author = {Raina, Rajat and Battle, Alexis and Lee, Honglak and Packer, Benjamin and Ng, Andrew Y.},
+ title = {Self-taught Learning: Transfer Learning from Unlabeled Data},
+ booktitle = {Proceedings of the 24th International Conference on Machine Learning},
+ series = {ICML '07},
+ year = {2007},
+ isbn = {978-1-59593-793-3},
+ location = {Corvalis, Oregon, USA},
+ pages = {759--766},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/1273496.1273592},
+ doi = {10.1145/1273496.1273592},
+ acmid = {1273592},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+} 
+  ```
+  
 - [Piotr Dollar, Christian Wojek (2012). Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
 
 - [McCulloch, W. S., & Pitts, W. (1943). A logical calculus of the ideas
@@ -87,3 +107,4 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 [Szegedy2015]: https://arxiv.org/pdf/1512.00567v3.pdf
 [Jonathan2014]: https://www.robots.ox.ac.uk/~vgg/rg/papers/tompson2014.pdf
+[Raina2007] : https://web.eecs.umich.edu/~honglak/icml07-selftaughtlearning.pdf
