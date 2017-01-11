@@ -14,3 +14,5 @@
     organization={Springer}
   }
   ```
+
+[RostenDrummond2006]: https://www.edwardrosten.com/work/rosten_2006_machine.pdf

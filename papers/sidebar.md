@@ -3,3 +3,4 @@
 ## References
 - [Deep Learning](#papers/deep_learning)
 - [Computer Vision](#papers/computer_vision)
+- [SLAM](#papers/SLAM)

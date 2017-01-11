@@ -8,15 +8,7 @@
                Arjun Jain and
                Yann LeCun and
                Christoph Bregler},
-  title     = {Joint Training of a Convolutional Network and a Graphical Model for
-               Human Pose Estimation},
-  journal   = {CoRR},
-  volume    = {abs/1406.2984},
-  year      = {2014},
-  url       = {http://arxiv.org/abs/1406.2984},
-  timestamp = {Tue, 01 Jul 2014 11:58:08 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/TompsonJLB14},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+  journal   = {CoRR}
 }
   ```
   
@@ -32,11 +24,7 @@
   title     = {Rethinking the Inception Architecture for Computer Vision},
   journal   = {CoRR},
   volume    = {abs/1512.00567},
-  year      = {2015},
-  url       = {http://arxiv.org/abs/1512.00567},
-  timestamp = {Sat, 02 Jan 2016 11:38:49 +0100},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/SzegedyVISW15},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+  year      = {2015}
 }
   ```
 
@@ -44,15 +32,12 @@
 - [Jaderberg, Max and Simonyan. (2015). Spatial Transformer Networks.][Jaderberg2015]
 
   ```
-@incollection{NIPS2015_5854,
-title = {Spatial Transformer Networks},
-author = {Jaderberg, Max and Simonyan, Karen and Zisserman, Andrew and kavukcuoglu, koray},
-booktitle = {Advances in Neural Information Processing Systems 28},
-editor = {C. Cortes and N. D. Lawrence and D. D. Lee and M. Sugiyama and R. Garnett},
-pages = {2017--2025},
-year = {2015},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
+@inproceedings{jaderberg2015spatial,
+  title={Spatial transformer networks},
+  author={Jaderberg, Max and Simonyan, Karen and Zisserman, Andrew and others},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={2017--2025},
+  year={2015}
 }
   ```
 
@@ -69,11 +54,7 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
   title     = {gvnn: Neural Network Library for Geometric Computer Vision},
   journal   = {CoRR},
   volume    = {abs/1607.07405},
-  year      = {2016},
-  url       = {http://arxiv.org/abs/1607.07405},
-  timestamp = {Tue, 02 Aug 2016 01:00:00 +0200},
-  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/HandaBPSMD16},
-  bibsource = {dblp computer science bibliography, http://dblp.org}
+  year      = {2016}
 }
   ```
   
@@ -88,5 +69,7 @@ url = {http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf}
 [McCullochPitts1943]: http://www.minicomplexity.org/pubs/1943-mcculloch-pitts-bmb.pdf
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 [Szegedy2015]: https://arxiv.org/pdf/1512.00567v3.pdf
+[Jaderberg2015]: http://papers.nips.cc/paper/5854-spatial-transformer-networks.pdf
+[Ankur2016]: https://arxiv.org/abs/1607.07405
 [Jonathan2014]: https://www.robots.ox.ac.uk/~vgg/rg/papers/tompson2014.pdf
 [Raina2007]: https://web.eecs.umich.edu/~honglak/icml07-selftaughtlearning.pdf
