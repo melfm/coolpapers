@@ -20,7 +20,18 @@
 }
   ```
 
-- [Piotr Dollar, Christian Wojek (2012). Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
+
+
+- [Zhang. (2016). How Far are We from Solving Pedestrian Detection?][Zhang2016]
+
+  ```
+@article{zhang2016far,
+  title={How Far are We from Solving Pedestrian Detection?},
+  author={Zhang, Shanshan and Benenson, Rodrigo and Omran, Mohamed and Hosang, Jan and Schiele, Bernt},
+  journal={arXiv preprint arXiv:1602.01237},
+  year={2016}
+}
+  ```
 
 
 - [Bojarski. (2016). End to End Learning for Self-Driving Cars.][Bojarski2016]
@@ -33,9 +44,12 @@
   year={2016}
 }
   ```
+ 
+- [Piotr Dollar, Christian Wojek (2012). Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
 
-  
+
 [Jafari2016]: https://arxiv.org/abs/1610.00748v1
 [shen2016]: https://arxiv.org/pdf/1612.00478v1.pdf
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 [Bojarski2016]: https://arxiv.org/pdf/1604.07316v1.pdf
+[Zhang2016]: https://arxiv.org/pdf/1602.01237v2.pdf
