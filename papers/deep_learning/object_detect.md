@@ -11,6 +11,23 @@
 }
   ```
 
+- [Shaoqing. (2016). Faster R-CNN.][Shaoqing2016]
+
+  ```
+@article{DBLP:journals/corr/RenHG015,
+  author    = {Shaoqing Ren and
+               Kaiming He and
+               Ross B. Girshick and
+               Jian Sun},
+  title     = {Faster {R-CNN:} Towards Real-Time Object Detection with Region Proposal
+               Networks},
+  journal   = {CoRR},
+  volume    = {abs/1506.01497},
+  year      = {2015}
+}
+  ```
+
+
 - [Zhou. (2015). Learning Deep Features for Discriminative Localization.][Zhou2015]
 
   ```
@@ -21,7 +38,8 @@
   year={2015}
 }
   ```
- 
+
+
 - [Sermanet. (2013). Overfeat: Integrated recognition, localization and detection using convolutional networks.][Sermanet2013]
 
   ```
@@ -36,3 +54,4 @@
 [redmon2016]: https://arxiv.org/abs/1612.08242
 [Sermanet2013]: https://arxiv.org/pdf/1312.6229v4.pdf
 [Zhou2015]: https://arxiv.org/pdf/1512.04150.pdf
+[Shaoqing2016]: https://arxiv.org/abs/1506.01497

@@ -44,6 +44,25 @@
   year={2016}
 }
   ```
+
+- [Xiaozhi. (2016). 3D Object Proposals using Stereo Imagery for Accurate Object Class Detection.][Xiaozhi2016]
+
+  ```
+@article{DBLP:journals/corr/ChenKZMFU16,
+  author    = {Xiaozhi Chen and
+               Kaustav Kundu and
+               Yukun Zhu and
+               Huimin Ma and
+               Sanja Fidler and
+               Raquel Urtasun},
+  title     = {3D Object Proposals using Stereo Imagery for Accurate Object Class
+               Detection},
+  journal   = {CoRR},
+  volume    = {abs/1608.07711},
+  year      = {2016},
+  url       = {http://arxiv.org/abs/1608.07711}
+}
+  ```
  
 - [Piotr Dollar, Christian Wojek (2012). Pedestrian Detection: An Evaluation of the State of the Art.][Dollar2012]
 
@@ -53,3 +72,4 @@
 [Dollar2012]: https://www.vision.caltech.edu/Image_Datasets/CaltechPedestrians/files/PAMI12pedestrians.pdf
 [Bojarski2016]: https://arxiv.org/pdf/1604.07316v1.pdf
 [Zhang2016]: https://arxiv.org/pdf/1602.01237v2.pdf
+[Xiaozhi2016]: https://arxiv.org/pdf/1608.07711v1.pdf
