@@ -1,13 +1,16 @@
 # Object Detection
 
-- [Redmon. (2016). YOLO9000: Better, Faster, Stronger.][redmon2016]
+
+
+
+- [Ren. (2017). Accurate Single Stage Detector Using Recurrent Rolling Convolution][ren2017]
 
   ```
-@article{redmon2016yolo9000,
-  title={YOLO9000: Better, Faster, Stronger},
-  author={Redmon, Joseph and Farhadi, Ali},
-  journal={arXiv preprint arXiv:1612.08242},
-  year={2016}
+@inproceedings{Ren17CVPR,
+author = {Jimmy Ren and Xiaohao Chen and Jianbo Liu and Wenxiu Sun and Jiahao Pang and Qiong Yan and Yu-Wing Tai and Li Xu},
+title = {Accurate Single Stage Detector Using Recurrent Rolling Convolution},
+booktitle = {CVPR},
+year = {2017}
 }
   ```
 
@@ -51,6 +54,7 @@
 }
   ```
 
+[ren2017]: https://arxiv.org/pdf/1704.05776.pdf
 [redmon2016]: https://arxiv.org/abs/1612.08242
 [Sermanet2013]: https://arxiv.org/pdf/1312.6229v4.pdf
 [Zhou2015]: https://arxiv.org/pdf/1512.04150.pdf

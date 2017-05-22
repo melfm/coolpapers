@@ -7,8 +7,9 @@
 - [Recurrent Neural Nets](#papers/deep_learning/recurrent)
 - [Misc](#papers/deep_learning/misc)
 
-#### Summary
--[Object Segmentation](#papers/deep_learning/notes/ZhusegDeepM2016)
+## Summary
+- [Od-Recurrent Rolling Conv](#papers/deep_learning/notes/ren_RRC2017)
+- [Object Segmentation](#papers/deep_learning/notes/ZhusegDeepM2016)
 
 ## Robotics
 - [SLAM](#papers/SLAM)
