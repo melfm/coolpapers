@@ -8,7 +8,7 @@
 - [Misc](#papers/deep_learning/misc)
 
 ## Summary
-- [Od-Recurrent Rolling Conv](#papers/deep_learning/notes/ren_RRC2017)
+- [Od-Multi-View 3D](#papers/deep_learning/notes/ChenMultiView3D2017)
 - [Object Segmentation](#papers/deep_learning/notes/ZhusegDeepM2016)
 
 ## Robotics

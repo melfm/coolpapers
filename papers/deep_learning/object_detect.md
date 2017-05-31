@@ -2,6 +2,16 @@
 
 
 
+- [Chen. (2017).Multi-View 3D Object Detection Network for Autonomous Driving][ren2017]
+
+  ```
+@article{chen2016multi,
+  title={Multi-View 3D Object Detection Network for Autonomous Driving},
+  author={Chen, Xiaozhi and Ma, Huimin and Wan, Ji and Li, Bo and Xia, Tian},
+  journal={arXiv preprint arXiv:1611.07759},
+  year={2016}
+}
+  ```
 
 - [Ren. (2017). Accurate Single Stage Detector Using Recurrent Rolling Convolution][ren2017]
 
