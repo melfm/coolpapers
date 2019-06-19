@@ -13,11 +13,16 @@
 
 ## [Principled Methods for Advising Reinforcement Learning Agents](http://cseweb.ucsd.edu/~ewiewior/03principled.pdf)
 
-## Notes
+### Notes
 
 ## [Reward Shaping in Episodic Reinforcement Learning](https://pdfs.semanticscholar.org/41c5/0331ed5d3ffa51d879cc2e1a675c99445bc3.pdf)
 
-## Notes
+### Notes
+
+## [Reward Shaping via Meta-Learning](https://arxiv.org/pdf/1901.09330.pdf)
+
+### Notes
+
 
 
 
