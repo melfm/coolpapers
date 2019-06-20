@@ -1,4 +1,4 @@
-# Distribution Similarity
+# Distribution Similarity, Similarity Metric
 
 Many problems in testing and learning require evaluating distribution similarity in high dimensions.
 The analysis of distributions is fundamental. Many algorithms rely on information theoretic approaches such as entropy, mutual information, or Kullback–Leibler divergence. However, to estimate these quantities,one must first either perform density estimation, or employ sophisticated space-partitioning/bias-correction strategies which are typically infeasible for high-dimensional data.
@@ -23,4 +23,16 @@ The analysis of distributions is fundamental. Many algorithms rely on informatio
 - Kernel embedding of distributions
 - 
 
+## [Metric Learning for Reinforcement Learning Agents](https://pdfs.semanticscholar.org/f3b5/689d80cf849e94bb41e9e7b05f2f552390ab.pdf)
 
+### Notes
+- Distance metric learning algorithm, the agent learns a metric that should generalize across the entire state space, NOT JUST the region explored.
+- Goal : Scale and select state variables automatically from data gathered via agent experience.
+- Three main steps :
+    - Collect data while agent explores
+    - Decide which states are `more similar` based on the transitions
+    - Use state relatedness to calculate a distance metric, i.e. states which have similar transitions should be closer
+    to states with dissimilar transitions.
+#### Transition Similarity
+- Learn a Mahalanobis distance function, parameterized by a positive semi-definite matrix `W` : `d(v, w) = (v - w)^T W(v - w)`
+- Learning the distance function is learning the matrix `W`, and because its positive semi-definite, `W = G^T G` for some matrix `G`, and so the Mahalanobix distance function `d` would be the squared Euclidean distance after applying the transformation `G` to the data points.
