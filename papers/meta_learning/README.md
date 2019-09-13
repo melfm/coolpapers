@@ -22,3 +22,22 @@
   - terminate (γ= 0)
   - bootstrap (λ= 0),
   - or to continue onto the next step (γ= 1 and λ= 1).
+
+
+## [Meta-Learning with Implicit Gradients](https://arxiv.org/pdf/1909.04630.pdf)
+
+### Notes
+- When we talk about meta-learning, we talk about higher-order derivatives which always imposes a non-trivial computational and memory burden. It can also suffer from vanishing gradients.
+- This paper is `implicit` MAML, optimization-based meta-learning to avoid differentiating through the optimization path.
+- Think, task-specific parameters using a set of meta-parameters $\theta \in \Theta \equiv \mathcal{R}^d$. Goal is to learn meta-parameters that produce good task specific parameters *after* adaptation.
+- This is also referred to as bi-level optimization, because the underlying optimization problem is done either explicitly or implicitly.
+- The meta-learned parameter ($\theta^{*}_{ML}$) has a learned inductive bias that is particularly well-suited for fine-tuning on tasks from $P(\tau)$.
+
+
+
+
+
+
+
+
+
