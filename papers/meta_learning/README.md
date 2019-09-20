@@ -1,16 +1,14 @@
 # Meta-Learning
 
-Prior meta-learning methods: 
+## Overview
+Prior meta-learning methods - train a meta-learner that learns how to update the parameters of the core learner's model.
+With gradient (or optimization) based meta-learning, meta-parameters are learned in an `outer loop`, while task-specific models are learned in the `inner loop`.
+
+
 ## [Learning a synaptic learning rule](https://mila.quebec/wp-content/uploads/2019/08/bengio_1991_ijcnn.pdf)
 
 - Consider the idea of synaptic modification rule as a parametric function.
 - Joint global optimization $(a)$ the synaptic modification function and $(b)$ the network that are learning to do stuff.
-
-## [Learning to control fast-weight memories](ftp://ftp.idsia.ch/pub/juergen/fastweights.pdf)
-- Parameterized `memory` function for changing a vector-valued memory structure and the current input.
-- The memory and the retrieval functions need to be differentiable w.r.t. their internal parameters.
-- Slowly learn feed-forward network $S$ whose input at time $t$ is the vector $x(t)$ and whose output is transformed into immediate weight changes for a second `fast-weight` network $F$.
-- $F$ serves as a short-term memory, because at different time steps, the same input even may be processed in different ways depending on the time-varying state of $W_F$
 
 
 ## [Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks](https://arxiv.org/abs/1703.03400)
@@ -25,14 +23,17 @@ Prior meta-learning methods:
 <img src="images/meta-grad.png" width="200" height="120" /> </p>
 
 - Consider a distribution over tasks $p(\tau)$, you train from samples drawn from $\tau_i$ but you also test on new samples - the test error serves as the training error of the meta-learning process.
-- Meta-optimization is performed over the model parameters $\theta$, whereas the objective is computed using the updated model parameters $\theta$.
 - The meta-gradient update involves a gradient through a gradient. Computationally, this requires an additional backward pass through $f$ to compute the Hessian-vector products.
+- MAML learner's weights are updated using the gradient, as opposed to using a learned update (this means that we do not need additional parameters for meta-learning)
 
 Maths
 - You go through each task $\tau_i$, the model's parameters $\theta$ become $\theta_i'$.
 
-$\theta_i'$ = $\theta$ - $\alpha \bigtriangledown_{\theta}$
-
+- $\theta_i'$ = $\theta$ - $\alpha \bigtriangledown_{\theta} \mathcal{L}(f_{\theta})$
+- The model parameters are trained by optimizing for the performance of $f_{\theta'_i}$ w.r.t. $\theta$ across tasks.
+- Meta-optimization is performed over the model parameters $\theta$, whereas the objective is computed using the updated model parameters $\theta'_i$.
+- Meta-objective : $\min_{\theta}$ $\sum_{\tau_i \sim p(\tau)}$ $\mathcal{L_{\tau_i}(f_{\theta'_i})}$
+- Meta-optimization: $\theta \leftarrow$ $\theta -$ $\beta \bigtriangledown_{\theta}$ $\sum_{\tau_i \sim p(\tau)}$ $\mathcal{L_{\tau_i}(f_{\theta'_i})}$
 
 
 ## [Meta-Gradient Reinforcement Learning](https://arxiv.org/abs/1805.09801)
