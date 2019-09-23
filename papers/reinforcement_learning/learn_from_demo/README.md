@@ -41,3 +41,9 @@ So they add a large margin classification loss:
 
 ## [Leveraging Demonstrations for Deep Reinforcement Learning on Robotics Problems with Sparse Rewards](https://arxiv.org/pdf/1707.08817.pdf)
 
+## [Reinforcement and Imitation Learning for Diverse Visuomotor Skills](https://arxiv.org/abs/1802.09564)
+
+
+
+
+
