@@ -6,7 +6,7 @@ If you design this arbitrarily, they can distract the learner from the intended 
 ## [Policy Invariance Under Reward Transformations: Theory and Application to Reward Shaping](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/NgHaradaRussell-shaping-ICML1999.pdf)
 
 ### Notes
-- Policy invariance in shaping, where shaping must obey certain conditions to avoid convering to suboptimal policies.
+- Policy invariance in shaping, where shaping must obey certain conditions to avoid converging to suboptimal policies.
 - Reward for executing a transition between two states is the difference in the value of a `potential function` applied to each state.
 
 ## [Reinforcement Learning from Demonstration through Shaping](https://www.ijcai.org/Proceedings/15/Papers/472.pdf)

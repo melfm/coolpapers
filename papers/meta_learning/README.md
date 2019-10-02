@@ -48,6 +48,11 @@ Maths
   - terminate (γ= 0)
   - bootstrap (λ= 0),
   - or to continue onto the next step (γ= 1 and λ= 1).
+### Meta-Gradients to Returns
+- Define $g_{\eta}(\tau_t) = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3}, ..., + \gamma^{n-1} R_{t+n} + \gamma^n v_{\theta}(S_{t+n})$
+- $\eta =\{\gamma, n\}$
+- Define $g_{\eta}(\tau_t) = R_{t+1} + \gamma (1 - \lambda) v_{\theta}(S_{t+1}) + \gamma \lambda_{g_{\eta}}(\tau_{t+1})$
+    - $\lambda-$return is a geometric mixture of $n-$step returns
 
 
 ## [Meta-Learning with Implicit Gradients](https://arxiv.org/pdf/1909.04630.pdf)
