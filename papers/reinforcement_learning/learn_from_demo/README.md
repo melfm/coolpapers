@@ -41,3 +41,13 @@ So they add a large margin classification loss:
 
 ## [Leveraging Demonstrations for Deep Reinforcement Learning on Robotics Problems with Sparse Rewards](https://arxiv.org/pdf/1707.08817.pdf)
 
+
+
+## [Reinforcement Learning from Demonstration through Shaping](https://www.ijcai.org/Proceedings/15/Papers/472.pdf)
+- Incorporate demonstration data as a shaping potential
+- Using a multivariate Gaussian to calculate similarity between state-action pairs.
+- Originated from HAT.
+
+
+## [Principled Methods for Advising Reinforcement Learning Agents](http://cseweb.ucsd.edu/~ewiewior/03principled.pdf)
+- Proof of state-action potential shaping function for MDP.
