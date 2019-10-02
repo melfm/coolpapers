@@ -51,3 +51,9 @@ So they add a large margin classification loss:
 
 ## [Principled Methods for Advising Reinforcement Learning Agents](http://cseweb.ucsd.edu/~ewiewior/03principled.pdf)
 - Proof of state-action potential shaping function for MDP.
+## [Reinforcement and Imitation Learning for Diverse Visuomotor Skills](https://arxiv.org/abs/1802.09564)
+
+
+
+
+
