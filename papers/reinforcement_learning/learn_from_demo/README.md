@@ -5,13 +5,9 @@
 ### Notes
 - DQfD : Prioritized replay queue, combines temporal difference updates with supervised classification of demonstrator's actions
 - Outperforms Prioritized Dueling Double Deep Q-nets (PDD DQN)
-- Recall that we are interested in Q-learning, by finding the optimal value functions by solving the Bellman equation
-- So then the optimal policy would be to act greedily with respect to this value function we found, which evaluates action given some state inout $s$, parameterized by $\theta$.
-- Also recall, DQN, uses a separate target network that is copied every $\tau$ steps from the regular network, this makes target Q-values more stable. The agent also uses a replay buffer which is sampled uniformly in order to perform updates to the network.
-- Double Q-learning update now, uses the current network to calculate argmax over $s'$ and the target network for the value of that action. So now just visualize the loss yourself.
-- Once you separate these value functions for these variables, i.e. current state and next state, while acting greedily w.r.t. action your main network is telling you to do, evaluated using your target network, essentially reduces the upward bias (whatever that means? ) that is created with regular Q-learning updates. 
+- When you separate these value functions for these variables, i.e. current state and next state, while acting greedily w.r.t. action your main network is telling you to do, evaluated using your target network, essentially reduces the upward bias (whatever that means? ) that is created with regular Q-learning updates. 
 - **Prioritized Experience Replay** modifies the DQN agent to sample more important transitions from its replay buffer more frequently. The priority is calculated from the last TD error for the transition. Remember, to account for the change in the distribution, updates to the network are weighted with importance sampling.
-- Some interesting background, DAGGER (iteratively produce new policies based on polling the expert outside the original state space - requires the expert to be available during training.), Deeply AggreVaTeD (extends DAGGER with DNN and continuous action space), zero-sum game (learner chooses a policy and the adversary chooses a reward function.)
+- Recall, DAGGER (iteratively produce new policies based on polling the expert outside the original state space - requires the expert to be available during training.), Deeply AggreVaTeD (extends DAGGER with DNN and continuous action space), zero-sum game (learner chooses a policy and the adversary chooses a reward function.)
 - DQfD combines TD and classification losses in a batch algorithm in a model-free setting
 - Their agent is also pre-trained on the demonstration data and the batch of self-generated data grows over time and is stored in the experience replay.
 - **AlphaGo** also first trains a policy network from a dataset of 30 million expert actions. It then uses this as a starting point to apply policy gradient updates during self-play, combined with planning rollouts.
@@ -21,7 +17,7 @@
 - Pre-train your agent guy to learn to imitate the demonstrator with a value function that satisfies the Bellman equation so that it can be updated with TD updates once he startes interacting with the environment
 - Network is updated by applying *4* losses :
   - 1-step double Q-learning loss
-  - $n-$step double Q-learning loss
+  - $n-$ step double Q-learning loss
   - supervised large margin classification loss
   - $L2$ regularization loss on the network weights and biases
 - Again, the supervised loss is for clasification of the expert actions, Q-learning loss ensures the network satisfies the Bellman equation and can be used as a starting point for TD learning.
@@ -51,7 +47,13 @@ So they add a large margin classification loss:
 
 ## [Principled Methods for Advising Reinforcement Learning Agents](http://cseweb.ucsd.edu/~ewiewior/03principled.pdf)
 - Proof of state-action potential shaping function for MDP.
+
+
 ## [Reinforcement and Imitation Learning for Diverse Visuomotor Skills](https://arxiv.org/abs/1802.09564)
+- The policy takes both an RGB camera observation and a  proprioceptive feature vector that describes the joint  positions and angular velocities.
+- You then throw CNN, MLP, LSTM, GAIL and PPO into the soup!
+- Solved simple block stacking task etc. Stacking is only one level though.
+
 
 
 
