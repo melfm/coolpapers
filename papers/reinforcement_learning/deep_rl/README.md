@@ -26,4 +26,23 @@
 - Now $N-$step return : So instead of one step you do n-step update, thats it
 - For prioritized replay, you can use absolute TD-error to sample from replay as means of measuring priority? So I dont know you take something with higher error ?
 - Correlated noise drawn from Ornstein-Uhlenbeck (whats that?) - It was found to be unneccessary
+
+## [Improving Sample Efficiency in Model-Free Reinforcement Learning from Images](https://arxiv.org/pdf/1910.01741.pdf)
+- Training with images is harder because the agent needs to learn a latent representation together with a control policy to perform the task.
+- To improve sample efficiency, two things you can do :
+    - Extract relevant features for your task
+    - Use off-policy method
+- Pixel recondstruction loss is vital for learning a good representation.
+- Built on top of SAC - You have a soft policy eval step and a soft policy improvement step.
+    - Soft Q-function is parameterized by a weight vector obtained using the exponentially moving average of the soft Q-function weights to stabilize training.
+    - Soft policy improvement step learns a parameteric policy $\pi(a_t,s_t)$ by directly minimizing the KL divergence between the policy and a Boltzmann distribution induced by the current soft Q-function.
+- When learning from raw images, we deal with the problem of partial observability.
+- Do you remember the reconstruction loss? Its simple really just L2 norm of output of decoder minus the observation.
+    - Or it can be some $\beta-$VAE loss
+- To infer temporal statistics, such as velocity and accelaration, it is common practice to stack 3 consecutive frames to form a single observation.
+- This work does not attempt to predict future frames, but rather just focuses on learning representation to stay model-free.
+
+
+
+## [Stochastic Latent Actor-Critic: Deep Reinforcement Learning with a Latent Variable Model]
 - 
