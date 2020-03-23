@@ -1,5 +1,32 @@
 # Generalization, Transfer, Domain Rand
 
+## [Learning to See before Learning to Act](https://ai.googleblog.com/2020/03/visual-transfer-learning-for-robotic.html)
+
+### Notes
+- Model is trained on passive vision task and then adapted to perform manipulation tasks
+- It is important to carefully select which parts of the pre-trained model to transfer
+- Passive here means the data distribution is independent of the agent's decisions
+- Make use of "affordance maps"
+- Affordance of manipulation ?
+    - TODO
+- Very bad definitions of "backbone" and "heads"
+    - backbone : Heavy backbone model for extracting visual features
+    - head : lightweight vision head consisting of one or a few conv layers
+- Input representation
+    - RGB-D heightmap
+- Visual prediction is a 2D heatmap that can represent a wide variety of vision tasks.
+- Various vision tasks such as edge detection, segmentation etc are used
+- They actually collect all this data through random exploring agent and label it using detectors ?
+- They also try models trained with ImageNet and COCO
+- Learning manipulation affordance
+    - ConvNet and a motion primitive
+    - Predicts a heatmap encoding probability of picking success at each pixel location
+    - The motion primitive is a pre-defined function which controls the robot arm to perform manipulation task from a fixed initial arm position.
+    - Motion primitive is open-loop with motion planning executed using a stable, collision free IK solver.
+- I don't get these primitives?
+- No RL here, just grabbing stuff using a planner.
+
+
 ## [Sim-to-Real Transfer with Neural-Augmented Robot Simulation](http://proceedings.mlr.press/v87/golemo18a.html)
 
 ### Notes
