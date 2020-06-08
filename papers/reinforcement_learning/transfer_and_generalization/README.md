@@ -1,5 +1,50 @@
 # Generalization, Transfer, Domain Rand
 
+## [Invariant Causal Prediction for Block MDPs](https://arxiv.org/abs/2003.06016)
+- Block MDPs : Families of environments with a shared latent state space and dynamics structure over the latent space, but varying observations. There exists some latent causal structure that is shared among all of the envs and the sources of variability between envs do not affect the reward, this family of envs is called a *Block MDP*.
+- Model-irrelevance state abstractions (MISA) : generalizes to novel observations
+- Using bisimulation and the minimal causal set of variables found by the algorithm, provide bounds on the model error and sample complexity
+
+### Background
+- Bisimulation relations are a type of state abstraction that offers a mathematically precise definition of what it means for two envs to share the same structure
+    - Two states are bisimilat if they share the same expected reward and equivalent distributions over the next bisimilar states
+- ICP (Invariant Causal Prediction) to find the causal feature set, the minimal set of featues which are causal predictors of a target variable
+    - ICP removes irrelevant variables from the input, just as state abstractions remove irrelevant information from the envs observations
+- IRM extends ICP by augmenting empirical risk minimization to learn a data representation free of spurious correlations
+    - IRM learns a representation \phi for which the optimal linear classifier $w$ is invariant across $e$. This objective is a constrained optimization problem
+
+- Relaxed block MDP: spurious variables may have different transition dynamics across the different envs so long as these correlations do not affect the expected reward
+- Invariant causal prediction aims to identify a set S of causal variables such that a linear predictor with support on S will attain consistent performance over all envs
+
+- Normal PAC generalization bounds require a much larger number of envs that one could expect to obtain in the RL setting.
+- Instead of assuming access to a bisimilar MDP M', just provide discrepancy bounds for an MDP M^ produced by a learned state representation \phi(x), dynamics function f and rewward function $R$.
+
+### Methods
+- 1) ICP to select the causal variables in the state in the setting where variables are given - This corresponds to direct feature selection which with high probability
+returns the minimal causal feature set.
+- 2) Gradient-based similar to IRM objective, with no assumption of a linear causal relationship and a learned causal invariant representation - impose an additional
+invariance constraint.
+
+- Variable Selection for linear predictors : Take your replay buffer, tag the envs from where they come from. Apply ICP to find all causal ancestors of the reward iteratively.
+- Learning model-irrelevance State Abstraction : Design an objective to learn a dynamics preserving state abstraction Z, where the similaity of the model is bounded by the model error
+in the env.
+- This requires disentangling the state space into a minimal representation that causes reward $s_t=\phi(x_t)$ and everything else $n_t=\varphi(x_t)$
+- To incorporate a meaningful objective and ground the learned representation, a decoder is used
+
+    
+## [Invariant Policy Optimization: Towards Stronger Generalization in Reinforcement Learning](https://arxiv.org/pdf/2006.01096.pdf)
+
+- Find a representation such that there exists an action-predictor built on top of this representation that is simultaneously optimal across all training domains
+    - Find causes of successful actions
+- A policy will generalize well if it exploits invariances resulting from causal relationships present across domains
+- The PAC-Bayes Control, provides a way to make provable generalization guarantees under distributional shifts
+    - They require an a prior bound on how much the test domain differs from the training domain in terms of f-divergence
+ - Find features that are causally linked to a target variable by exploiting the invariance of causal relationships
+- IRM Invariant risk minimization formualtes the problem in terms of finding a representation such that the optimal classifier built on top of this representation is invariance across domains
+- This classifier ignores the spurious correlations, and requires a bilevel optimization problem and tackled via a regularizer that approximates its solution
+- Treat each env corresponding to different interventions on the data-generation process that do not intervene on the target variable
+    - there exists a classifier that is simultaneousl optimal for all training domains
+ 
 ## [Learning to See before Learning to Act](https://ai.googleblog.com/2020/03/visual-transfer-learning-for-robotic.html)
 
 ### Notes
@@ -25,15 +70,6 @@
     - Motion primitive is open-loop with motion planning executed using a stable, collision free IK solver.
 - I don't get these primitives?
 - No RL here, just grabbing stuff using a planner.
-
-
-## [Sim-to-Real Transfer with Neural-Augmented Robot Simulation](http://proceedings.mlr.press/v87/golemo18a.html)
-
-### Notes
-- Use data collected from a real robot to train an RNN to predict the discrepancies between simulation and the real world.
-- Since data is collected using non-task-specific policy, it can be used to learn policies related to different tasks. In other words, at this stage, we only care about using the data to learn discrepancy between simulated and the real world.
-- Once you have a model that provides you with corrections between real and sim states, it can be combined to learn a policy.
-- To learn the polic now, at each time step the current state transition in the source domain is passed to LSTM model, lets call it $\phi$ to compute an estimate of the state in the target env, an action is then chosen according to this estimated state.
 
 ## [Robust Domain Randomization For Reinforcement Learning](https://openreview.net/pdf?id=H1xSOTVtvH)
 - Domain adaptation techniques aim to update the data distribution in simulation to match the real distribution through some canonical mapping or using regularization methods.
