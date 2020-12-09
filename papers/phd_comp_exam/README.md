@@ -48,6 +48,9 @@ Summary of papers related to representation learning and state abstraction in RL
 - They also talk about ``backpropagation is ill-characterized; it is impossible to know how the algorithm will perform when presented with a complex problem because it often converges to bad local minima.`` What do they mean?
   - ``perceptron convergence theorem, there should be no local minima to fall into``
 
+- Cross references:
+  - Watkins [1989] used the CMAC algorithm
+
 ## [Feudal Reinforcement Learning](http://www.cs.toronto.edu/~fritz/absps/dh93.pdf)
 - Speed up RL to enable learning to happen simultaneously at multiple resolutions in space and time.
 - Q-learning managerial heirarchy in which high level managers learn how to set tasks to their sub-managers who learn how to satisfy them.
@@ -57,13 +60,62 @@ Summary of papers related to representation learning and state abstraction in RL
   - Finding smaller subtasks that are easier to solve
   - Exploration
   - Structural generalization
+- An appropriate heirarchy can address some of these bottlenecks, higher level managers should sustain a larger grain of temporal resolution
+- Exploration for actions leading to rewards can be more efficient since it can be done non-uniformly. Higher level managers can decide that reward is best found in some other region of the state space and send the agent there directly
+- Two principles:
+  - Reward Hiding: Managers must reward sub-managers for doing their bidding
+    - Sub-managers should learn to obey their managers and leave it up to them to determine what is best to do
+  - Information Hiding: Info hidden both downwards- sub-managers dont know the task he super-manager has set  for the manager. And upwards- a super-manager doesnt know what choices its manager has made to satisfy commands.
+- Each manager maintains Q-values over the actions it instructs its sub-managers to perform based on the location of the agent at the subordinate level of detail and the command it has received from above.
+- When the agent starts, actions at successively lower levels are selected using Q-learning softmax method and the agent moves according to the finest grain action (talking about levels here).
+- Typical pattern that emerges, low level Q values embody an implicit knowledge of how to get around the maze, so the feudal system can explore efficiently once it (slowly) learns not to search in the original place.
 
-
-
-
-- Other references:
+- Cross references:
   - RL & backgammon (Tesauro, 1992)
+  - Singh’s (1992b) variable temporal resolution system
+
+## [Reinforcement Learning with Selective Perception and Hidden State (Chapter 4)](https://web.media.mit.edu/~tristan/Classes/MAS.945/Papers/Contextual/McCallum_Thesis.pdf)
+[Chapter 4]
+- Recall the definition of ``Markov with respect to reward:`` a state is Markov with respect to reward if knowledge of past states does not help predict future reward from that state.
+- On the other hand, if there is statistically significant difference in future discounted reward between statistics depending on where the agent came from, then knowledge of which state the agent came from does help predict reward, and the state should be split.
+- What are state distinctions necessary for calculating the optimal policy?
+- Maze Example
+- Distinguishing between states that have different policy actions is necessary, but the example proof shows its not sufficient. The agent must also distinguish states with different utilities (means reward right?)
+- The utile distinction test distinguishes states that have different policy actions or different utilities, and merges states that have the same policy action and same utility.
+- When the agent is not given a model of the environment, it will have to estimate a model using its experience. A statistical test will be needed to determine if the data is sufficient to claim statistical significance in utility differences.
+- TODO: UDM Algorithm
 
 
+- Cross references:
+  - Kaelbling [1995]
+  - Baum-Welch
 
+## [Chattering in SARSA(lambda)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.35.325&rep=rep1&type=pdf)
+- They demonstrate the `chattering' phenomenon which happens with SARSA in the case where Q-function is approximated by state aggregation. The example MDP problem is as follows: From the starting state, the agent picks either upper or lower arc to traverse through, but from then on its decisions are forced to a final absorbing state. Along the way of going through each arc, the agent faces 0 cost, but from upper arc to the final state a cost of 2 occurs and from the lower arc to the final state a cost of 1 occurs.
+- The agent is following a $$\epsilon$$-greedy policy with constant value of $\epsilon=10\%$ of picking suboptimal actions. When, the agent picks the upper arc, the cost-2 arc, i.e. upper arc into the goal will be followed more often and the learned Q values will increase. On the other hand, when the lower path appears more desirable, then the cost-1 arc will be weighted more and Q values will decrease. And this cycle repeats, where the learned Q values oscillate forever.
+- This failure occurs in this case due to the usage of state aggregation and therefore one can conclude that SARSA with function approximation are prone to this type of failure modes.
+If we use a powerful function approximation to represent every Q function exactly then, it would overcome this issue.
+- And the reason that $Boltzmann$ exploration can help is because, it uses knowledge from the Q function, given an appropriate temperature parameter $\beta$ is selected, it has a smoothing effect over the action selection probability since it takes into account weighting of all actions according to their values.
+Also with $\epsilon$-greedy style of policy the probability of visiting a given state changes discontinuously when the Q function fluctuates, but a $Boltzmann$ policy is a continuous function w.r.t. the Q function.
 
+## [Predictive representations of state](https://web.eecs.umich.edu/~baveja/Papers/psr.pdf)
+- States of a dynamical system can be represented by multi-step, action-conditional predictions of future observations.
+- k-order Markov models?
+  - History-based approach, uses simple functions of past observations as states
+- The model's internal state gives it temporally unlimited memory-the ability to remember an event that happened arbitrarily long ago.
+- State representation can be a relatively simple record of the stream of past actions and observations.
+- You could say, POMDP learning algorithms encounter many local minima and sanddle points because all their states are equipotential.
+- PSR is like the generative-model approach in that it updates the state representation recursively.
+- A history based representation looks to the past and records what did happen, PSR looks to the future and represents what will happen.
+
+- Cross references:
+  - If important aspects of the dynamics are genuinely unknown, then these methods are rarely effective (e.g., Shatkay & Kaelbling, 1997).
+  - McCallum (1995) has shown in a number of examples that sophisticated history-based methods
+
+## [MAXQ-Q learning](https://papers.nips.cc/paper/1999/file/e5a4d6bf330f23a8707bb0d6001dfbe8-Paper.pdf)
+
+## [Towards a unified theory of state abstraction for MDPs]()
+
+## [State representation learning for control]()
+
+## [A geometric per-spective on optimal representations for reinforcement learning]()
