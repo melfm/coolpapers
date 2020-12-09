@@ -114,7 +114,26 @@ Also with $\epsilon$-greedy style of policy the probability of visiting a given 
 
 ## [MAXQ-Q learning](https://papers.nips.cc/paper/1999/file/e5a4d6bf330f23a8707bb0d6001dfbe8-Paper.pdf)
 
-## [Towards a unified theory of state abstraction for MDPs]()
+## [Towards a unified theory of state abstraction for MDPs](http://anytime.cs.umass.edu/aimath06/proceedings/P21.pdf)
+- State abstraction (or state aggregation): instead of working in the ground state space, the agent finds solutions in the abstract state space much faster by treating groups of states as unit by ignoring irrelevant state information.
+- Abstractions allow the agent to distinguish relevant information from irrelevant information.
+- Different types of state abstraction
+  - Bisimulation
+  - Homomorphism
+  - Utile Distinction
+  - Policy irrelevance
+- How does a solution to the abstract MDP relate to the ground MDP? What guarantees can be made?
+- What information is lost when an abstraction is applied?
+- Bisimulation, where states with the same transition and reward functions are aggregated. Given a flat representation of an MDP, this partitioning can be accomplished in polynomial time.
+- Several algorithms can be used to aggregate states between iterations of model-based planning algorithms like value iteration or policy iteration.
+- MAXQ heirarchy aggregates states within a subtask only if their reward and transition functions are the same for any policy consistent with the heirarchy.
+- Using statistics to do the abstraction online was a feature of G-algorithm, which aggregates states with the same reward and Q-values for each action.
+- Abstraction is in general a mapping from one problem representation to a new representation, while preserving some properties. So preservation of properties that are needed for an agent to make decisions that lead to optimal behavior.
+  - For example, bisimulation preserves  the one-step model of an MDP (i.e. the transition and reward functions) while policy-irrelevance types of abstraction preserve the optimal actions.
+- 
+
+- Cross references:
+  - Ravindran et al. examined state aggregation based on homomorphisms of the model, rather than strict action matching.
 
 ## [State representation learning for control]()
 
